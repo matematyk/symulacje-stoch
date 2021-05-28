@@ -1,3 +1,6 @@
+*.ipynb
+*.Rhistory
+*.JPG
 *.jpg
 *.pdf
 *.png
