@@ -1,14 +1,14 @@
-#Przeprowadzić doświadczenie dla parametrów: d = 20, α 0 = 4, α 1 = −2, β = 0.5.
+#Przeprowadzić doświadczenie dla parametrów: d = 20, α0 = 4, α1 = −2, β = 0.5.
 d<- 20
 alfa0 <- 4
-alfa1 <- -2
+alfa1 <- 2
 beta <- 0.5
 
 zero <- numeric((d+2)*(d+2))
 X <- matrix(zero, nrow=d+2, ncol=d+2)
 M <- 10^5
 
-burn_time <- 10^4
+burn_time <- 10^3
 
 S <- numeric(M-burn_time)
 N <- numeric(M-burn_time)
@@ -50,3 +50,7 @@ mear(N)
 # Wyestymować rozkad Boltzmanna (rozkład na poziomach energii): jest to z definicji rozkład
 
 S*alfa0 + N*alfa1
+
+hist(S*alfa0 + N*alfa1, prob=TRUE)
+# 
+image(X)
